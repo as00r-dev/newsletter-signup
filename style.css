@@ -185,10 +185,13 @@ form {
 	gap: 1rem;
 }
 
+form input {
+	width: 400px;
+}
+
 input {
 	--lavender-blue: hsla(235, 94%, 86%, 0.3);
 
-	width: 400px;
 	border: 1px solid var(--lavender-blue);
 	padding: 0.675rem clamp(1rem, 5%, 3rem);
 	background: var(--lavender-blue);
