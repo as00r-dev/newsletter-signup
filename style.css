@@ -17,6 +17,7 @@
 	--cornflower-blue: hsla(221, 69%, 68%, 1);
 	--lavender-blue: hsla(235, 94%, 86%, 1);
 	--xiketic: hsla(257, 21%, 6%, 1);
+	--white: whitesmoke;
 }
 
 /* Simple CSS Reset */
@@ -31,8 +32,9 @@
 /* Typography */
 p {
 	font-size: var(--sm-font);
-	color: var(--xiketic);
+	color: var(--white);
 	margin-block-end: 0.75em;
+	width: clamp(25ch, 80%, 70ch);
 }
 
 h1 {
@@ -68,7 +70,7 @@ h6 {
 
 /* Body */
 body {
-	background: whitesmoke;
+	background: var(--white);
 	line-height: 1.5;
 	font-family: "Poppins", sans-serif;
 	height: 100vh;
@@ -111,14 +113,15 @@ body {
 
 /* Image Container */
 .left {
-	flex: 2;
+	flex: 1;
 	background-image: url("./images/jack-b-uWFUZ1hOgb8-unsplash.jpg");
 	background-repeat: no-repeat;
 	background-size: cover;
 	background-position: center center;
-	border-top-left-radius: 8px;
-	border-bottom-left-radius: 8px;
 	position: relative;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
 }
 
 .logo {
@@ -126,32 +129,30 @@ body {
 
 	background: var(--xiketic);
 	color: var(--lavender-blue);
-	padding: 3rem 0;
 	display: flex;
 	align-items: center;
 	justify-content: center;
-	gap: 1rem;
-	position: absolute;
-	top: 33%;
-	left: 0;
 	width: 100%;
+	padding: 1rem;
+}
+
+.logo img {
+	width: 100%;
+	height: auto;
 }
 
 .attribution {
-	--xiketic: hsla(257, 21%, 6%, 0.3);
+	--lavender-blue: hsla(235, 94%, 86%, 0.3);
 
-	background: var(--xiketic);
-	position: absolute;
-	bottom: 0;
-	left: 0;
+	background: var(--lavender-blue);
 	padding: 0.5rem clamp(1rem, 5%, 3rem);
 	width: 100%;
-	border-bottom-left-radius: 8px;
 	text-align: center;
 }
 
 .attribution p {
 	color: var(--lavender-blue);
+	margin-block-end: 0;
 }
 
 .attribution a {
@@ -162,7 +163,7 @@ body {
 /* Form Container */
 .right {
 	background: var(--violet-crayola);
-	flex: 3;
+	flex: 2;
 	display: flex;
 	flex-direction: column;
 	align-items: center;
@@ -199,13 +200,35 @@ input {
 	box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
 }
 
+input:active,
+input:focus-visible {
+	outline: 1px solid hsla(205, 63%, 37%, 1);
+}
+
 input::placeholder {
-	color: whitesmoke;
+	color: var(--white);
 	font-size: var(--sm-font);
 }
 
+input[type="submit"] {
+	background: var(--white);
+	padding: 16px 32px;
+	border-radius: 16px;
+	margin-bottom: 1.5em;
+	border: 0;
+	outline: 0;
+	cursor: pointer;
+	box-shadow: 1px 0px 13px -5px oldlace;
+	transition: all 0.3s ease-in-out;
+}
+
+input[type="submit"]:hover {
+	box-shadow: 1px 0px 13px 0px oldlace;
+	transform: scale(1.02);
+}
+
 /* Basic Responsive Type */
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 1024px) {
 	:root {
 		--ratio: 1.125;
 	}

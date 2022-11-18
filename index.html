@@ -12,8 +12,7 @@
 		<div class="container">
 			<div class="col left">
 				<div class="box logo">
-					<img src="#" alt="LOGO" />
-					<span>LOGO</span>
+					<img src="./images/Logo-White.svg" alt="LOGO" />
 				</div>
 				<div class="box attribution">
 					<p>
@@ -42,17 +41,21 @@
 				</div>
 				<div class="box form">
 					<p>Let's Get Started</p>
-					<form action="">
+					<form id="myForm" action="">
 						<input type="text" placeholder="First Name" />
 						<input type="text" placeholder="Second Name" />
 						<input type="email" placeholder="eMail" />
 						<input type="tel" placeholder="Phone" />
-						<input type="password" placeholder="Password" />
-						<input type="password" placeholder="Confirm Password" />
+						<input type="password" id="passOne" placeholder="Password" />
+						<input
+							type="password"
+							id="passTwo"
+							placeholder="Confirm Password"
+						/>
 					</form>
 				</div>
 				<div class="box button">
-					<button>Subscribe</button>
+					<input type="submit" form="myForm" value="Subscribe" />
 					<p>Don't worry, we won't spam <3</p>
 				</div>
 			</div>
