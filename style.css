@@ -200,7 +200,6 @@ input {
 	box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
 }
 
-input:active,
 input:focus-visible {
 	outline: 1px solid hsla(205, 63%, 37%, 1);
 }
@@ -225,6 +224,22 @@ input[type="submit"] {
 input[type="submit"]:hover {
 	box-shadow: 1px 0px 13px 0px oldlace;
 	transform: scale(1.02);
+}
+
+input:disabled {
+	opacity: 0.5;
+}
+
+input.passwordMatch {
+	outline: 1px solid hsla(170, 97%, 40%, 1);
+}
+
+input.passwordNotMatch {
+	outline: 1px solid hsla(8, 100%, 59%, 1);
+}
+
+input.waitingForPass {
+	outline: 1px solid hsla(205, 63%, 37%, 1);
 }
 
 /* Basic Responsive Type */
