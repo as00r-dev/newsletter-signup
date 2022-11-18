@@ -241,17 +241,3 @@ input.passwordNotMatch {
 input.waitingForPass {
 	outline: 1px solid hsla(205, 63%, 37%, 1);
 }
-
-/* Basic Responsive Type */
-@media screen and (max-width: 1024px) {
-	:root {
-		--ratio: 1.125;
-	}
-	.container {
-		flex-direction: column;
-	}
-
-	form {
-		grid-template-columns: repeat(1, 1fr);
-	}
-}
